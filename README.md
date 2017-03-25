@@ -1,7 +1,7 @@
 # @reworkjs/cli
 
 The [ReworkJS](https://github.com/reworkjs/reworkjs) command line interface.  
-Install this globally and you'll have access to the `rjs` command anywhere on your system.
+Install this globally to gain access to the `rjs` command from anywhere on your system.
 
 `npm install -g @reworkjs/cli`
 
