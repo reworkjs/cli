@@ -1,0 +1,40 @@
+{
+  "name": "@reworkjs/cli",
+  "version": "1.0.0",
+  "description": "Command Line Interface for the ReworkJs Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib --copy-files",
+    "build:watch": "npm run build -- --watch"
+  },
+  "bin": {
+    "rjs": "./lib/cli.js"
+  },
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/reworkjs/cli.git"
+  },
+  "keywords": [
+    "ReworkJS",
+    "CLI"
+  ],
+  "author": "Guylian Cox <gc@madkings.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reworkjs/cli/issues"
+  },
+  "homepage": "https://github.com/reworkjs/cli#readme",
+  "devDependencies": {
+    "@foobarhq/eslint-config": "^1.0.1",
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.18.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.7.7"
+  }
+}
