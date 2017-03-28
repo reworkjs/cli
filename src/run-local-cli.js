@@ -18,5 +18,8 @@ export default function runLocalCli() {
     process.exit(1);
   }
 
-  childProcess.spawnSync(exe, process.argv.slice(2));
+  childProcess.spawnSync(exe, process.argv.slice(2), {
+    env: process.env,
+    stdio: 'inherit',
+  });
 }
