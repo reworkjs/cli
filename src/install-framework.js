@@ -41,18 +41,20 @@ function pckExists() {
   }
 }
 
+const REWORK_CORE_PKG = '@reworkjs/core';
+
 function installReworkJs() {
   const packageJson = JSON.parse(fs.readFileSync(pckJsonFile).toString());
 
-  if (packageJson.dependencies && packageJson.dependencies['@reworkjs/reworkjs']) {
+  if (packageJson.dependencies && packageJson.dependencies[REWORK_CORE_PKG]) {
     return;
   }
 
-  if (packageJson.devDependencies && packageJson.devDependencies['@reworkjs/reworkjs']) {
-    console.warn(`${chalk.blue('@reworkjs/reworkjs')} should be a dependency instead of a devDependency.`);
+  if (packageJson.devDependencies && packageJson.devDependencies[REWORK_CORE_PKG]) {
+    console.warn(`${chalk.blue(REWORK_CORE_PKG)} should be a dependency instead of a devDependency.`);
     return;
   }
 
-  console.info(`Adding ${chalk.blue('@reworkjs/reworkjs')} as a dependency.`);
-  childProcess.execSync('npm install @reworkjs/reworkjs --save', { env: process.env, stdio: 'inherit' });
+  console.info(`Adding ${chalk.blue(REWORK_CORE_PKG)} as a dependency.`);
+  childProcess.execSync(`npm install ${REWORK_CORE_PKG} --save --no-optional`, { env: process.env, stdio: 'inherit' });
 }

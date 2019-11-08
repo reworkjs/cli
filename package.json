@@ -1,6 +1,6 @@
 {
   "name": "@reworkjs/cli",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Command Line Interface for the ReworkJs Framework",
   "main": "index.js",
   "scripts": {
