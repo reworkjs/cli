@@ -30,7 +30,7 @@
     "@foobarhq/eslint-config": "^1.0.1",
     "babel-cli": "^6.24.0",
     "babel-preset-es2015": "^6.24.0",
-    "eslint": "^3.18.0"
+    "eslint": "^6.6.0"
   },
   "dependencies": {
     "chalk": "^1.1.3",
