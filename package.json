@@ -4,9 +4,9 @@
   "description": "Command Line Interface for the ReworkJs Framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --out-dir lib --copy-files",
-    "build:watch": "npm run build -- --watch"
+    "build:watch": "npm run build -- --watch",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "rjs": "./lib/cli.js"
